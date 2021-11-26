@@ -16,12 +16,16 @@ int main() {
     };
 
     //# sắp xếp các vector trong a theo tổng các phần tử giảm dần
-    for(int i=0; i<3;i++){
-        for(int j=i+1;j<3;j++){
-            [=](vector<int> a[]){
-                int
-                for(int k=0;k<3;k++)
+    for(int i=0; i<a.size();i++){
+        for(int j=i+1;j<a.size();j++){
+        auto sum =  [=](int i) -> int {
+            int sum=0;
+            for(int k=0; k<a[i].size();k++){
+                sum+=a[i][k];
             }
+                return sum;
+            };
+            if(sum(j)>sum(i)) a[i].swap(a[j]);
         }
     }
 
