@@ -4,4 +4,4 @@ project(KythuatlaptrinhHUST)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Week2
-Week2/ex9.cpp )
+ test.cpp Week2/ex10.cpp)

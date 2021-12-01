@@ -2,9 +2,8 @@
 #include <algorithm>
 #include <cmath>
 #include <ctime>
-#include <algorithm>
 #include <cstdio>
-#include "map"
+
 
 using namespace std;
 
@@ -29,7 +28,9 @@ void prepare_input() {
 //# BEGIN fast code
 
 //# khai báo các biến phụ trợ cần thiết
-vector<pair<double,double>> expow;
+ double epow[NUM_INPUTS];
+ double bot[NUM_INPUTS][1];
+ double sum=1.0;
 
 //# hàm chuẩn bị dữ liệu
 void precalc() {
@@ -40,7 +41,8 @@ void precalc() {
 
 //# hàm tính sigmoid(x) nhanh sigmoid_fast(x)
 inline double sigmoid_fast(double x) {
-
+    if(epow[(int)x]) return epow[(int)x];
+    else pow((int)x,n)
 }
 
 //# END fast code
