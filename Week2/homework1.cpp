@@ -16,6 +16,7 @@ int main(){
     }
     res[0]=Ax[0]*Bx[0];
     int ans= res[0];
+
     for(int i=1;i<=m+n;i++){
         res[i]=0;
         for(int j=0;j<=i;j++){
