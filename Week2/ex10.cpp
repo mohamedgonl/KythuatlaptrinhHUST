@@ -86,6 +86,7 @@ double benchmark(Matrix (*multiply) (const Matrix&, const Matrix&), Matrix &resu
 }
 
 int main() {
+
     base = gen_random_matrix();
 
     Matrix a, b;
