@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/test.cpp">
+		<Unit filename="D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/test rand.cpp">
 			<Option target="Week2"/>
 		</Unit>
 		<Unit filename="D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/CMakeLists.txt">

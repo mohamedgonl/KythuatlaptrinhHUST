@@ -65,27 +65,27 @@ include CMakeFiles/Week2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Week2.dir/flags.make
 
-CMakeFiles/Week2.dir/test.cpp.obj: CMakeFiles/Week2.dir/flags.make
-CMakeFiles/Week2.dir/test.cpp.obj: ../test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Week2.dir/test.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Week2.dir\test.cpp.obj -c "D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\test.cpp"
+CMakeFiles/Week2.dir/test_rand.cpp.obj: CMakeFiles/Week2.dir/flags.make
+CMakeFiles/Week2.dir/test_rand.cpp.obj: ../test\ rand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Week2.dir/test_rand.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Week2.dir\test_rand.cpp.obj -c "D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\test rand.cpp"
 
-CMakeFiles/Week2.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Week2.dir/test.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\test.cpp" > CMakeFiles\Week2.dir\test.cpp.i
+CMakeFiles/Week2.dir/test_rand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Week2.dir/test_rand.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\test rand.cpp" > CMakeFiles\Week2.dir\test_rand.cpp.i
 
-CMakeFiles/Week2.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Week2.dir/test.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\test.cpp" -o CMakeFiles\Week2.dir\test.cpp.s
+CMakeFiles/Week2.dir/test_rand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Week2.dir/test_rand.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\SMaterials\KTLT\Thuc hanh\KythuatlaptrinhHUST\test rand.cpp" -o CMakeFiles\Week2.dir\test_rand.cpp.s
 
 # Object files for target Week2
 Week2_OBJECTS = \
-"CMakeFiles/Week2.dir/test.cpp.obj"
+"CMakeFiles/Week2.dir/test_rand.cpp.obj"
 
 # External object files for target Week2
 Week2_EXTERNAL_OBJECTS =
 
-Week2.exe: CMakeFiles/Week2.dir/test.cpp.obj
+Week2.exe: CMakeFiles/Week2.dir/test_rand.cpp.obj
 Week2.exe: CMakeFiles/Week2.dir/build.make
 Week2.exe: CMakeFiles/Week2.dir/linklibs.rsp
 Week2.exe: CMakeFiles/Week2.dir/objects1.rsp

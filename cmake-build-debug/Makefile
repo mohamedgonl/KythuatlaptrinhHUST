@@ -128,29 +128,29 @@ Week2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Week2.dir\build.make CMakeFiles/Week2.dir/build
 .PHONY : Week2/fast
 
-test.obj: test.cpp.obj
-.PHONY : test.obj
+test_rand.obj: test_rand.cpp.obj
+.PHONY : test_rand.obj
 
 # target to build an object file
-test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Week2.dir\build.make CMakeFiles/Week2.dir/test.cpp.obj
-.PHONY : test.cpp.obj
+test_rand.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Week2.dir\build.make CMakeFiles/Week2.dir/test_rand.cpp.obj
+.PHONY : test_rand.cpp.obj
 
-test.i: test.cpp.i
-.PHONY : test.i
+test_rand.i: test_rand.cpp.i
+.PHONY : test_rand.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Week2.dir\build.make CMakeFiles/Week2.dir/test.cpp.i
-.PHONY : test.cpp.i
+test_rand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Week2.dir\build.make CMakeFiles/Week2.dir/test_rand.cpp.i
+.PHONY : test_rand.cpp.i
 
-test.s: test.cpp.s
-.PHONY : test.s
+test_rand.s: test_rand.cpp.s
+.PHONY : test_rand.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Week2.dir\build.make CMakeFiles/Week2.dir/test.cpp.s
-.PHONY : test.cpp.s
+test_rand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Week2.dir\build.make CMakeFiles/Week2.dir/test_rand.cpp.s
+.PHONY : test_rand.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Week2
-	@echo ... test.obj
-	@echo ... test.i
-	@echo ... test.s
+	@echo ... test_rand.obj
+	@echo ... test_rand.i
+	@echo ... test_rand.s
 .PHONY : help
 
 
