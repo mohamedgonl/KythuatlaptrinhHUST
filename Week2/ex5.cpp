@@ -11,8 +11,8 @@ struct Complex {
 };
 
 Complex operator + (Complex a, Complex b) {
-   Complex c{(a.real+b.real),(a.imag+b.imag)};
-   return c;
+    Complex c{(a.real+b.real),(a.imag+b.imag)};
+    return c;
 }
 
 Complex operator - (Complex a, Complex b) {
@@ -29,8 +29,8 @@ Complex operator * (Complex a, Complex b) {
 
 Complex operator / (Complex a, Complex b) {
     Complex c{};
-    c.real=(a.real*b.real-a.imag*b.imag)/(pow(a.real,2)+ pow(a.imag,2));
-    c.imag=(a.real*b.imag-a.imag*b.real)/(pow(a.real,2)+ pow(a.imag,2));
+    c.real=(a.real*b.real+a.imag*b.imag)/(pow(b.real,2)+ pow(b.imag,2));
+    c.imag=(a.imag*b.real-a.real*b.imag)/(pow(b.real,2)+ pow(b.imag,2));
     return c;
 }
 
@@ -40,7 +40,7 @@ ostream& operator << (ostream& out, const Complex &a) {
 }
 
 int main() {
-    c++;
+
     double real_a, real_b, img_a, img_b;
     cin >> real_a >> img_a;
     cin >> real_b >> img_b;

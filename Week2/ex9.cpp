@@ -3,20 +3,14 @@
 #include <cmath>
 #include <ctime>
 #include <cstdio>
-
-
 using namespace std;
-
 const int LIMIT = 100;
 const int NUM_ITER = 100000;
 const int NUM_INPUTS = NUM_ITER * 100;
-
 double sigmoid_slow(double x) {
     return 1.0 / (1.0 + exp(-x));
 }
-
 double x[NUM_INPUTS];
-
 void prepare_input() {
     const int PRECISION = 1000000;
     const double RANGE = LIMIT / 20.0;
@@ -24,36 +18,38 @@ void prepare_input() {
         x[i] = RANGE * (rand() % PRECISION - rand() % PRECISION) / PRECISION;
     }
 }
+// BEGIN fast code
+const int N = 1000000;
+double y[N + 1];
+/*****************
+# YOUR CODE HERE #
+*****************/
 
-//# BEGIN fast code
-
-//# khai báo các biến phụ trợ cần thiết
- double epow[NUM_INPUTS];
- double bot[NUM_INPUTS][1];
- double sum=1.0;
-
-//# hàm chuẩn bị dữ liệu
 void precalc() {
-    /*****************
-    # YOUR CODE HERE #
-    *****************/
+    double delta = 2.0 * LIMIT / N;
+    for (int i = 0; i <= N; i++)
+        y[i] = sigmoid_slow(-LIMIT + i * delta);
+/*****************
+# YOUR CODE HERE #
+*****************/
 }
 
-//# hàm tính sigmoid(x) nhanh sigmoid_fast(x)
-inline double sigmoid_fast(double x) {
-    if(epow[(int)x]) return epow[(int)x];
-    else pow((int)x,n)
+double sigmoid_fast(double x) {
+    if (x < -LIMIT) return 0;
+    if (x > LIMIT) return 1;
+    double delta = 2.0 * LIMIT / N;
+    int i = (x + LIMIT) / delta;
+    return (y[i+1] - y[i]) / delta * (x - (-LIMIT + i *delta)) + y[i];
 }
-
-//# END fast code
-
+/*****************
+# YOUR CODE HERE #
+*****************/
+// END fast code
 double benchmark(double (*calc)(double), vector<double> &result) {
-    const int NUM_TEST = 20;
-
+    const int NUM_TEST = 1000;
     double taken = 0;
     result = vector<double>();
     result.reserve(NUM_ITER);
-
     int input_id = 0;
     clock_t start = clock();
     for (int t = 0; t < NUM_TEST; ++t) {
@@ -67,13 +63,11 @@ double benchmark(double (*calc)(double), vector<double> &result) {
     }
     clock_t finish = clock();
     taken = (double)(finish - start);
-  printf("Time: %.9f\n", taken / CLOCKS_PER_SEC);
+    printf("Time: %.9f\n", taken / CLOCKS_PER_SEC);
     return taken;
 }
-
 bool is_correct(const vector<double> &a, const vector<double> &b) {
     const double EPS = 1e-6;
-
     if (a.size() != b.size()) return false;
     for (int i = 0; i < a.size(); ++i) {
         if (fabs(a[i] - b[i]) > EPS) {
@@ -82,25 +76,18 @@ bool is_correct(const vector<double> &a, const vector<double> &b) {
     }
     return true;
 }
-
 int main() {
     prepare_input();
     precalc();
-
     vector<double> a, b;
+    printf("Slow version\n");
     double slow = benchmark(sigmoid_slow, a);
+    printf("Fast version\n");
     double fast = benchmark(sigmoid_fast, b);
-
-    double xval;
-    scanf("%lf", &xval);
-    printf("%.6f \n", sigmoid_fast(xval));
-
-    if (is_correct(a, b) && (slow/fast > 1.3)) {
-        printf("Correct answer! Your code is faster\n");
-    } else if(slow/fast>1.3) printf("Slow-f \n");
-    else{
-        printf("Wrong answer\n");
+    if (is_correct(a, b)) {
+        printf("Correct answer! Your code is %.2f%% faster\n", slow / fast * 100.0);
+    } else {
+        printf("Wrong answer!\n");
     }
-
     return 0;
 }
