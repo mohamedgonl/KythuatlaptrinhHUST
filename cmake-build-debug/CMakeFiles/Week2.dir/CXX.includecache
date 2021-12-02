@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/test.cpp
+iostream
+D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/iostream
+vector
+D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/vector
+algorithm
+D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/algorithm
+

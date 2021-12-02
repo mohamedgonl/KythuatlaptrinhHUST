@@ -1,0 +1,3 @@
+D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/cmake-build-debug/CMakeFiles/Week2.dir
+D:/SMaterials/KTLT/Thuc hanh/KythuatlaptrinhHUST/cmake-build-debug/CMakeFiles/edit_cache.dir
