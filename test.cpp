@@ -63,24 +63,28 @@ using namespace std;
 //        l2=11,l1=1;
 //    }
 //}
-const string fb0 = "0", fb1="1";
-int n;
-string p;
-int save[100];
-int checkmid(){
-
-}
-void Fibo(int k){
-    if(k==0) return 1;
-}
-int proc(int n){
-    if(save[n]) return save[n];
-    else {
-        int mid = checkmid();
-        return mid + proc(n-1)+proc(n-2);
-    }
-}
+//const string fb0 = "0", fb1="1";
+//int n;
+//string p;
+//int save[100];
+//int checkmid(){
+//
+//}
+//void Fibo(int k){
+//    if(k==0) return 1;
+//}
+//int proc(int n){
+//    if(save[n]) return save[n];
+//    else {
+//        int mid = checkmid();
+//        return mid + proc(n-1)+proc(n-2);
+//    }
+//}
 int main(){
-    cin >> n>> p;
-    int len = p.length();
+//    cin >> n>> p;
+//    int len = p.length();
+
+    while((char c=getchar()) != EOF){
+        putchar(c);
+    }
 }
